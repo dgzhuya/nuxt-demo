@@ -39,3 +39,39 @@ $breakpoints: (
 		}
 	}
 }
+
+@mixin respondToOther {
+	@include respondTo('other') {
+		@content;
+	}
+}
+
+@mixin respondToPhone {
+	@include respondTo('phone') {
+		@content;
+	}
+}
+
+@mixin respondToPad {
+	@include respondTo('pad') {
+		@content;
+	}
+}
+
+@mixin respondToNotebook {
+	@include respondTo('notebook') {
+		@content;
+	}
+}
+
+@mixin respondToDesktop {
+	@include respondTo('desktop') {
+		@content;
+	}
+}
+
+@mixin respondToTV {
+	@include respondTo('tv') {
+		@content;
+	}
+}

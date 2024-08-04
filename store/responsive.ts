@@ -36,6 +36,9 @@ export const useResponsiveStore = defineStore('responsive', () => {
 
 	return {
 		device,
-		isPhone: computed(() => device.value === 'phone')
+		width,
+		isNotebook: computed(() => ['desktop', 'tv', 'notebook'].includes(device.value)),
+		isDesktop: computed(() => ['desktop', 'tv'].includes(device.value)),
+		isTv: computed(() => device.value === 'tv')
 	}
 })

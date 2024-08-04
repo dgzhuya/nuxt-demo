@@ -11,11 +11,24 @@
 	.about-container {
 		color: rebeccapurple;
 
-		@include respondTo('desktop') {
+		@include respondToTV {
+			color: red;
+		}
+
+		@include respondToDesktop {
 			color: gold;
 		}
 
-		@include respondTo('') {
+		@include respondToPhone {
+			color: green;
+		}
+
+		@include respondToNotebook {
+			color: chocolate;
+		}
+
+		@include respondToPad {
+			color: magenta;
 		}
 	}
 </style>

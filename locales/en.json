@@ -2,5 +2,11 @@
   "language": "language",
   "main": "Main",
   "hello": "Hello",
-  "about": "About"
+  "about": "About",
+  "lang": {
+    "en": "en",
+    "zh": "zh"
+  },
+  "create": "create",
+  "discover": "Discover"
 }
