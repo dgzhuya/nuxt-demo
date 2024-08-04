@@ -1,6 +1,11 @@
 export default defineNuxtConfig({
 	css: ['~/assets/reset.css'],
 	compatibilityDate: '2024-04-03',
+	nitro: {
+		prerender: {
+			autoSubfolderIndex: false
+		}
+	},
 	vite: {
 		css: {
 			preprocessorOptions: {
