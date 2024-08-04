@@ -1,0 +1,41 @@
+$breakpoints: (
+	other: 319px,
+	phone: (
+		320px,
+		480px
+	),
+	pad: (
+		481px,
+		768px
+	),
+	notebook: (
+		769px,
+		1024px
+	),
+	desktop: (
+		1025px,
+		1200px
+	),
+	tv: 1201px
+);
+
+@mixin respondTo($breakname) {
+	$bp: map-get($breakpoints, $breakname);
+	@if type-of($bp) == 'list' {
+		$min: nth($bp, 1);
+		$max: nth($bp, 2);
+		@media (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@if $breakname== 'other' {
+			@media (max-width: $bp) {
+				@content;
+			}
+		} @else {
+			@media (min-width: $bp) {
+				@content;
+			}
+		}
+	}
+}
